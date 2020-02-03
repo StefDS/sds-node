@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
   /// 
   res.writeHead(200, {"Content-Type": "text/html"});
   res.write("<b>Sample Web App</b><br>");
-  res.write("<b>** New Tech In Action - August 2019 for fun**</b><br><br>");
+  res.write("<b>** New Tech In Action - August 2019 **</b><br><br>");
   res.write("      Node Name: " + myos.hostname +  "<br>");
   res.write("   Node Address: " + myip.address() + " port: "+ server.address().port + "<br>");
   res.write("Storage Counter: " + vcounter + "<br>");
