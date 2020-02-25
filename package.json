@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/StefDS/MyRepository"
+    "url": "https://github.com/StefDS/sds-node"
   },
   "dependencies": {
     "ip": "^1.1.5"
