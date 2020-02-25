@@ -6,7 +6,9 @@ var myos = require('os');
 var mycounter = require("./sdsmodules.js");
 var http = require('http');
 const hostname = '0.0.0.0';
-const port = 8088;
+// const port = 8088;
+//const hostname = '127.0.0.1';
+const port = 3000;
 
 //const args = process.argv.slice(2);
 
@@ -14,8 +16,8 @@ const server = http.createServer((req, res) => {
   var vcounter =  mycounter.getcounter();
   /// 
   res.writeHead(200, {"Content-Type": "text/html"});
-  res.write("<b>Sample Web App</b><br>");
-  res.write("<b>** New Tech In Action - August 2019 **</b><br><br>");
+  res.write("<b>** Sample NodeJS Web Application **</b><br>");
+  res.write("<b>**   New Tech In Action -- 2020  **</b><br><br>");
   res.write("      Node Name: " + myos.hostname +  "<br>");
   res.write("   Node Address: " + myip.address() + " port: "+ server.address().port + "<br>");
   res.write("Storage Counter: " + vcounter + "<br>");
@@ -32,7 +34,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log("Server listing on port " + port.toString() );
+  console.log("Server " + hostname.toString() + " listing on port " + port.toString() );
 });
 
 var callback = function (err, data) {

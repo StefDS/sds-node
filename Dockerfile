@@ -13,14 +13,13 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
-
+# Install Node Package Manager for the JavaScript runtime environment Nodejs
 RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
-
 # Bundle app source
 COPY . .
 COPY ./app.log /data/app.log
 EXPOSE 3000
-# CMD node sdsmain.js
-CMD [ "npm", "start" ]
+CMD node sdsmain.js
+# CMD [ "npm", "start" ]

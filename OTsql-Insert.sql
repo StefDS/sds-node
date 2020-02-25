@@ -1,1 +1,0 @@
-INSERT INTO Example (name) VALUES ("myname");
